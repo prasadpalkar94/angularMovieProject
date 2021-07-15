@@ -1,0 +1,39 @@
+<!-- <p>home works!</p> -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="home" routerLinkActive="active"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a></li>
+        <li><a routerLink="current">NOW PLAYING</a></li>
+        <li><a routerLink="upcoming">UPCOMING</a></li>
+        <li><a routerLink="#">LATEST</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" >
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-sm-4">
+            <mat-card class="example-card">
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Movie name will be here
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button><a routerLink="movieDetail">More Detail</a></button>
+                </mat-card-actions>
+              </mat-card>
+          </div>
+      </div>
+  </div>
+  
+
+
+

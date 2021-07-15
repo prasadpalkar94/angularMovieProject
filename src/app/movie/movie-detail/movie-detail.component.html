@@ -1,0 +1,73 @@
+<!-- <p>movie-detail works!</p>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>UserID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listData">
+        <td>{{data.userId}}</td>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+      </tr>
+      </tbody>
+</table> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="home" routerLinkActive="active"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a></li>
+      <li><a routerLink="current">NOW PLAYING</a></li>
+      <li><a routerLink="upcoming">UPCOMING</a></li>
+      <li><a routerLink="#">LATEST</a></li>
+    </ul>
+    <form class="navbar-form navbar-right" >
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row py-15">
+    <div class="col-md-3">
+      <mat-card class="example-card">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="col-md-9">
+      <mat-card class="example-card">
+        <mat-card-content>
+
+          <div class="jumbotron">
+            <h1 class="display-4">Movie title</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <h4 class="display-4">Release</h4>
+            <p>Release info will take place here.</p>
+            <h2 class="display-4">Language Spoken:</h2>
+            <p>Language will take place here.</p>
+            <h2 class="display-4">Production Countries:</h2>
+            <p>Production Detail will take place here.</p>
+          </div>
+          
+
+          <div class="jumbotron ">
+            <div class="container">
+              <h2 class="display-4">Description</h2>
+              <p >Description will take place here.</p>
+            </div>
+          </div>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
