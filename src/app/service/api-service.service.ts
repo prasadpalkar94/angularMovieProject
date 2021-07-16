@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,5 +11,10 @@ export class ApiServiceService {
 
   getData(): Observable <any> {
    return this.httpClient.get("https://jsonplaceholder.typicode.com/posts");
+  }
+
+  getDataByParameter(): Observable <any> {
+    let param1= new HttpParams().set('postId',"1");
+    return this.httpClient.get("https://jsonplaceholder.typicode.com/posts/1/comments",{params:param1});
   }
 }

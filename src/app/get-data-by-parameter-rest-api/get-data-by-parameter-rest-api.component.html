@@ -1,0 +1,22 @@
+<!-- <p>get-data-by-parameter-rest-api works!</p> -->
+<h2>Get Data By Parameter!  through "https://jsonplaceholder.typicode.com/posts/1/comments"</h2>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>PostID</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let da of listDataByParamter">
+        <td>{{da.postId}}</td>
+        <td>{{da.id}}</td>
+        <td>{{da.name}}</td>
+        <td>{{da.email}}</td>
+        <td>{{da.body}}</td>
+      </tr>
+      </tbody>
+</table>
