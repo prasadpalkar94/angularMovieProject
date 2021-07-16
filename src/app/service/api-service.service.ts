@@ -9,6 +9,22 @@ export class ApiServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getDataForHome(): Observable <any> {
+    return this.httpClient.get("https://api.themoviedb.org/3/search/movie?api_key=ce8e7de79e18136fdb921ace16d363f9&language=en-US&query=Avengers&page=1&include_adult=false");
+   }
+
+   getDataForNowPlaying(): Observable <any> {
+    return this.httpClient.get(" https://api.themoviedb.org/3/movie/now_playing?api_key=5f9bfd5ab4dce1dd61c8ed83e1680d4e&language=en-US&page=1");
+   }
+
+   getDataForUpcoming(): Observable <any> {
+    return this.httpClient.get(" https://api.themoviedb.org/3/movie/upcoming?api_key=5f9bfd5ab4dce1dd61c8ed83e1680d4e&language=en-US&page=1");
+   }
+
+   getDataForLatest(): Observable <any> {
+    return this.httpClient.get("https://api.themoviedb.org/3/movie/latest?api_key=5f9bfd5ab4dce1dd61c8ed83e1680d4e&language=en-US");
+   }
+
   getData(): Observable <any> {
    return this.httpClient.get("https://jsonplaceholder.typicode.com/posts");
   }

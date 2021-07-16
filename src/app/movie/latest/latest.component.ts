@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../../service/api-service.service';
+import { Home } from '../../../apiData/home';
 
 @Component({
   selector: 'app-latest',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiServiceService) { }
+  listofLatest?:Home[];
 
   ngOnInit(): void {
+    this.apiService.getDataForLatest().subscribe(data =>{this.listofLatest = data;});
   }
-
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../../service/api-service.service';
+import { Home } from '../../../apiData/home';
 
 @Component({
   selector: 'app-nowplaying',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NowplayingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiServiceService) { }
+  listofNowPlaying?:Home[];
 
   ngOnInit(): void {
+    this.apiService.getDataForNowPlaying().subscribe(data =>{this.listofNowPlaying = data;});
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../../service/api-service.service';
+import { Home } from '../../../apiData/home';
 
 @Component({
   selector: 'app-upcoming',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiServiceService) { }
+  listofUpcoming?:Home[];
 
   ngOnInit(): void {
+    this.apiService.getDataForUpcoming().subscribe(data =>{this.listofUpcoming = data;});
   }
 
 }
