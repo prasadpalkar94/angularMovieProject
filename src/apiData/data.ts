@@ -4,5 +4,4 @@ export class Data{
     name?: string;
     email?: string;
     body?: string;
-
 }

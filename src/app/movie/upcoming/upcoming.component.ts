@@ -10,10 +10,13 @@ import { Home } from '../../../apiData/home';
 export class UpcomingComponent implements OnInit {
 
   constructor(private apiService:ApiServiceService) { }
-  listofUpcoming?:Home[];
+  
+  listofUpcoming:any = [];
 
   ngOnInit(): void {
-    this.apiService.getDataForUpcoming().subscribe(data =>{this.listofUpcoming = data;});
+    this.apiService.getDataForUpcoming().subscribe(data =>{this.listofUpcoming = data.results;});
+    console.log(this.listofUpcoming);
+    
   }
 
 }

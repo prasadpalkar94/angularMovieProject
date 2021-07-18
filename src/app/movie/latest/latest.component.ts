@@ -10,9 +10,10 @@ import { Home } from '../../../apiData/home';
 export class LatestComponent implements OnInit {
 
   constructor(private apiService:ApiServiceService) { }
-  listofLatest?:Home[];
+  listofLatest:any=[];
 
   ngOnInit(): void {
-    this.apiService.getDataForLatest().subscribe(data =>{this.listofLatest = data;});
+    this.apiService.getDataForLatest().subscribe(data =>{this.listofLatest = data.results;});
+    console.log(this.listofLatest);
   }
 }

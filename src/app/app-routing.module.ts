@@ -4,6 +4,7 @@ import { NowplayingComponent } from './movie/nowplaying/nowplaying.component';
 import { UpcomingComponent } from './movie/upcoming/upcoming.component';
 import { HomeComponent } from './movie/home/home.component';
 import { MovieDetailComponent } from './movie/movie-detail/movie-detail.component';
+import { LatestComponent } from './movie/latest/latest.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
 {path:'home', component:HomeComponent},
 {path:'current', component:NowplayingComponent},
 {path:'upcoming', component:UpcomingComponent},
+{path:'latest',component:LatestComponent},
 {path:'movieDetail',component:MovieDetailComponent}
 ];
 

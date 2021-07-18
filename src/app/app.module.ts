@@ -14,6 +14,7 @@ import { MovieDetailComponent } from './movie/movie-detail/movie-detail.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetDataRestApiComponent } from './get-data-rest-api/get-data-rest-api.component';
 import { GetDataByParameterRestApiComponent } from './get-data-by-parameter-rest-api/get-data-by-parameter-rest-api.component';
+import { NavBarComponent } from './movie/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GetDataByParameterRestApiComponent } from './get-data-by-parameter-rest
     LatestComponent,
     MovieDetailComponent,
     GetDataRestApiComponent,
-    GetDataByParameterRestApiComponent
+    GetDataByParameterRestApiComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
