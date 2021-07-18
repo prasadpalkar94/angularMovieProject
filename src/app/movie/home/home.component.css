@@ -2,12 +2,13 @@
     max-width: 400px;
   }
   
-  .img-size{
-    width:100%;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  /* .d-flex{
-    display: flex;
-    flex-direction: row;
-  } */
-  
+  .box{
+    padding: 10px 10px;
+    background-color: rgb(240, 240, 240);
+  }

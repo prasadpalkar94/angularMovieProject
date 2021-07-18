@@ -17,7 +17,7 @@
   </nav> -->
   <app-nav-bar></app-nav-bar>
 
-  <div class="container">
+  <!-- <div class="container">
       <div class="row justify-content-md-center" >
           <div class="col-md-3 d-flex">
             <mat-card class="example-card" *ngFor = "let item of items" >
@@ -31,6 +31,18 @@
               </mat-card>
           </div>
       </div>
+  </div> -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 mt-3 mb-3" *ngFor = "let item of items">
+        <div class="box">
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.backdrop_path}}" width="100%">
+        <h2> {{item.original_title}} </h2>
+        <a class="btn btn-dark btn-sm" routerLink="movieDetail">More Details</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   
