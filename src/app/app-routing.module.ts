@@ -13,7 +13,7 @@ const routes: Routes = [
 {path:'current', component:NowplayingComponent},
 {path:'upcoming', component:UpcomingComponent},
 {path:'latest',component:LatestComponent},
-{path:'movieDetail',component:MovieDetailComponent}
+{path:'movieDetail/:id',component:MovieDetailComponent}
 ];
 
 @NgModule({

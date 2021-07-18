@@ -16,7 +16,8 @@ export class UpcomingComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getDataForUpcoming().subscribe(data =>{this.listofUpcoming = data.results;});
     console.log(this.listofUpcoming);
-    
   }
+
+  
 
 }

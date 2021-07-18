@@ -11,9 +11,12 @@ export class LatestComponent implements OnInit {
 
   constructor(private apiService:ApiServiceService) { }
   listofLatest:any=[];
+  res:boolean=false;
 
   ngOnInit(): void {
+    
     this.apiService.getDataForLatest().subscribe(data =>{this.listofLatest = data.results;});
     console.log(this.listofLatest);
+    this.res=true;
   }
 }

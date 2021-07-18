@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -7,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-
+  user?: { id: string; };
   
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
   
 
   ngOnInit(): void {
-    
+    this.user = {
+      id: this.route.snapshot.params['id']
+    }
   }
 
 
