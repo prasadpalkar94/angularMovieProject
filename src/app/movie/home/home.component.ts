@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../../service/api-service.service';
 import { Home } from '../../../apiData/home';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { Home } from '../../../apiData/home';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private apiService:ApiServiceService) { }
+  constructor(private apiService:ApiServiceService, private router:Router) { }
   
    items:any = [];
+
+   onSelect(){
+      this.router.navigateByUrl('movieDetail');
+   }
 
   ngOnInit(): void {
     this.apiService.getDataForHome().subscribe(data =>{this.items = data.results;

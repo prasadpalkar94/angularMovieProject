@@ -38,8 +38,8 @@
       <div class="col-lg-3 mt-3 mb-3" *ngFor = "let item of items">
         <div class="box">
         <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.backdrop_path}}" width="100%">
-        <h2> {{item.original_title}} </h2>
-        <a class="btn btn-dark btn-sm" routerLink="movieDetail">More Details</a>
+        <h2 class="mt-3 mb-3"> {{item.original_title}} </h2>
+        <a class="btn btn-dark btn-sm" routerLink="/movieDetail/{{item.id}}">More Details</a>
         </div>
       </div>
     </div>
