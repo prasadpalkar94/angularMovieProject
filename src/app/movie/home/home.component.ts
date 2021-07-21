@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../../service/api-service.service';
 import { Home } from '../../../apiData/home';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
+
+ 
 
 @Component({
   selector: 'app-home',
@@ -12,7 +17,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private apiService:ApiServiceService, private router:Router) { }
   
+ 
    items:any = [];
+  
 
    onSelect(){
       this.router.navigateByUrl('movieDetail');
@@ -23,5 +30,7 @@ export class HomeComponent implements OnInit {
       console.log(this.items);
     });
   }
+
+  
 
 }

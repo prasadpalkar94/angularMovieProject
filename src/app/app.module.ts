@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceService } from './service/api-service.service';
 import { MaterialModule } from './material/material/material.module';
+import { FormsModule } from '@angular/forms';
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetDataRestApiComponent } from './get-data-rest-api/get-data-rest-api.component';
 import { GetDataByParameterRestApiComponent } from './get-data-by-parameter-rest-api/get-data-by-parameter-rest-api.component';
 import { NavBarComponent } from './movie/nav-bar/nav-bar.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -26,14 +31,17 @@ import { NavBarComponent } from './movie/nav-bar/nav-bar.component';
     MovieDetailComponent,
     GetDataRestApiComponent,
     GetDataByParameterRestApiComponent,
-    NavBarComponent
+    NavBarComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    //  Ng2SearchPipeModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]
